@@ -1,0 +1,44 @@
+<form action = "/phonebook" method = "post">
+<input type = "text" name = "first_name"> first name<br>
+<input type = "text" name = "last_name"> last name<br>
+<input type = "text" name = "street_address"> street address<br>
+<input type = "text" name = "city"> city<br>
+<input type = "text" name = "state"> state<br>
+<input type = "text" name = "zip"> zip<br>
+<input type = "text" name = "cell_phone"> Cell Phone<br>
+<input type = "text" name = "home_phone"> Home Phone<br>
+<input type = "text" name = "work_phone"> Work Phone<br>
+<input type = "submit" value = "Submit"> 
+</form>
+<table>
+	<thead>
+		<tr>
+
+			<th>first_name</th>
+			<th>last</th>
+			<th>address</th>
+			<th>city</th>
+			<th>state</th>
+			<th>zip</th>
+			<th>cell_phone</th>
+			<th>home_phone</th>
+			<th>work_phone</th>
+		</tr>
+	</thead>
+	<tbody>
+			<%phonebook.each do |contacts| %>
+			</tr>
+				<td><%=contacts["first_name"]%></td>
+				<td><%=contacts["last_name"]%></td>
+				<td><%=contacts["street_address"]%></td>
+				<td><%=contacts["city"]%></td>
+				<td><%=contacts["state"]%></td>
+				<td><%=contacts["zip"]%></td>
+				<td><%=contacts["cell_phone"]%></td>
+				<td><%=contacts["home_phone"]%></td>
+				<td><%=contacts["work_phone"]%></td>
+
+			<%end%>
+	</tbody>
+</table>
+
